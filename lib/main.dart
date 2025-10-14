@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:news_project_saad_faisal_team/network/api/articles_api.dart';
+import 'package:news_project_saad_faisal_team/network/model/viewed_articles/viewed_articles.dart';
+import 'package:news_project_saad_faisal_team/screens/browsing_screen.dart';
+import 'package:news_project_saad_faisal_team/utils/period.dart';
 
-void main() {
+void main() async {
+  ArticlesApi api = ArticlesApi();
+  ViewedArticles request = await api.getMostViewedArticlesByPeriod(
+    period: Period.day,
+  );
+
   runApp(const MainApp());
 }
 
@@ -9,8 +18,6 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(body: Center(child: Text('Hello World!'))),
-    );
+    return const MaterialApp(home: BrowsingScreen());
   }
 }
