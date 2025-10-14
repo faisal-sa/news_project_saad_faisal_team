@@ -5,11 +5,6 @@ import 'package:news_project_saad_faisal_team/screens/browsing_screen.dart';
 import 'package:news_project_saad_faisal_team/utils/period.dart';
 
 void main() async {
-  ArticlesApi api = ArticlesApi();
-  ViewedArticles request = await api.getMostViewedArticlesByPeriod(
-    period: Period.day,
-  );
-
   runApp(const MainApp());
 }
 
