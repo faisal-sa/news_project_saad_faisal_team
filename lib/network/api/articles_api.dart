@@ -5,7 +5,7 @@ import 'package:news_project_saad_faisal_team/utils/period.dart';
 
 class ArticlesApi {
   final ConstantAPi _constantAPi = ConstantAPi(
-    apiKey: "G7C9xllKjLr72GUFx5tXLPBdHAd6JUUD",
+    apiKey: "your_super_secret_api_key_here_saad",
   );
   Future<ViewedArticles> getMostViewedArticlesByPeriod({
     required Period period,
